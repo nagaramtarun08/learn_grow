@@ -15,6 +15,8 @@ import React from 'react';
     import ChatbotWidget from '@/components/ChatbotWidget';
     import { useAuth } from '@/hooks/useAuth';
     import LoadingSpinner from '@/components/LoadingSpinner';
+    import CreateCoursePage from './pages/CreateCoursePage';
+import ContentUploadPage from './pages/ContentUploadPage';
 
     const AppLayout = () => {
       return (
@@ -95,7 +97,8 @@ import React from 'react';
                 </ProtectedRoute>
               }
             />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/create-course" element={<CreateCoursePage />} />
+        <Route path="/content-upload" element={<ContentUploadPage />} />
           </Route>
         </Routes>
       );
